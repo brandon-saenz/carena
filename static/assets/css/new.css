@@ -1,0 +1,140 @@
+.app-container{background-color: white;}
+[data-bs-theme="dark"] .app-container{background-color: transparent;}
+
+.navbar_position{left: 0 !important;}
+
+.div-center{vertical-align: middle; display: flex !important; justify-content: center;}
+
+body { background-image: url('assets/media/auth/bg-valcas.png') !important; } 
+[data-bs-theme="dark"] body { background-image: url('assets/media/auth/bg-valcas.png') !important; }
+
+#kt_header{background-color: #314669;}
+[data-bs-theme="dark"] #kt_header {background-color: black;}
+
+
+.card_empresa{
+    background-color: transparent;
+    margin-inline: 1em;
+    margin-block: 1em;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+#dropdown-item{
+    position: fixed !important;
+    width: 500px;
+    left: 1em !important;
+    top: 7em !important;
+}
+
+.card_empresa:hover{background-color: white;}
+
+.card_empresa:hover *{color: #13263c !important;}
+
+.mapa{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+.content-map{ max-width: 1000px; width: 100vw; position: absolute;}
+#logo_map{width: 11vw; position: fixed; right: 6em; top: 8em;}
+.svg_map{ width: 100%; position: absolute; left: 0; top: 0;}
+#items_map{ width: 100%; position: absolute; left: 0; top: 0;}
+
+.svg_map{filter: invert(0%);}
+[data-bs-theme="dark"] .svg_map{filter: invert(100%);}
+.class_item_lote{
+    fill: #1B84FF;
+    opacity: 0;
+    stroke: #1B84FF;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.class_item_amenidad{
+    fill: #ff3d1b;
+    opacity: 0;
+    stroke: #ff3d1b;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.class_item_calle{
+    fill: #850f95;
+    opacity: 0;
+    stroke: #850f95;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+
+.item_map_selected{
+    stroke: white !important;
+    opacity: 0.7 !important;
+}
+
+.class_item_lote:hover, .class_item_amenidad:hover, .class_item_calle:hover{ opacity: 0.7; stroke: white;}
+
+.form_item{width: 24em; height: 2.2em; margin-left: 1em;}
+.form_select_item{ height: 2.2em; margin-left: 1em; padding: 0; padding-inline: 1em;}
+
+#btns_zoom{
+    position: fixed;
+    right: 3em; bottom: 3em;
+    z-index: 1000;
+}
+
+#dropdown-item{
+    max-height: 86vh;
+}
+
+.content-detalles{
+    overflow: scroll;
+}
+
+.bg-carena{
+    position: fixed;
+    left: 0; bottom: 0;
+    width: 100%; 
+    z-index: -1;
+}
+
+@media (max-width: 1000px) {
+    #dropdown-item{max-height: 70vh;}
+    .content-map{
+        left: 0; top: 0;
+    }
+    #logo_map{width: 15vw; right: 1em; top: 6em;}
+    .content-detalles{height: 65vh;}
+}
+
+@media (max-width: 501px) {
+    #dropdown-item{width: 95vw !important; top: 6em !important; max-height: 65vh;}
+    #btns_zoom{right: 1em; bottom: 1em;}
+    .form_item{width: 18em;}
+}
+
+@media (max-width: 400px) {
+}
+
+
+[data-bs-theme="dark"] .header .header-menu .menu>.menu-item.here>.menu-link {
+    background-color: rgba(255, 255, 255, .1);
+   
+}
+
+[data-bs-theme="dark"] .header .header-menu .menu>.menu-item.here>.menu-link .menu-title {
+    color: #fff !important;
+}
+
+[data-bs-theme="dark"] .ki-duotone{
+    line-height: 1;
+    font-size: 1rem;
+    color: white !important;
+}
