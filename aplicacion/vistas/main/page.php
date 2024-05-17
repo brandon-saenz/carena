@@ -111,6 +111,24 @@ License: For each use you must have a valid license purchased only from above li
 								<!--end::Navbar-->
 								<!--begin::Toolbar wrapper-->
 								<div class="topbar d-none align-items-stretch flex-shrink-0 toolbar-vue">
+									<!--begin::EXPORTAR-->
+									<div class="d-flex align-items-center ms-1 ms-lg-3">
+										<!--begin::Menu toggle-->
+										<a v-if="vista_mapa=='medidas'" href="<?php echo STASIS;?>/data/docs/mapa_superficies.pdf" target="_blank" class="btn btn-icon btn-active-light-primary btn-custom w-30px h-30px w-md-40px h-md-40px" data-kt-menu-placement="bottom-end">
+											<i class="ki-duotone ki-file-right" style="font-size: 1.6em !important;">
+												<span class="path1"></span>
+												<span class="path2"></span>
+											</i>
+										</a>
+										<a v-else href="<?php echo STASIS;?>/data/docs/mapa_nomenclaturas.pdf" target="_blank" class="btn btn-icon btn-active-light-primary btn-custom w-30px h-30px w-md-40px h-md-40px" data-kt-menu-placement="bottom-end">
+											<i class="ki-duotone ki-file-right" style="font-size: 1.6em !important;">
+												<span class="path1"></span>
+												<span class="path2"></span>
+											</i>
+										</a>
+										<!--begin::Menu toggle-->
+									</div>
+									<!--end::EXPORTAR-->
 									<!--begin::Ver Medidas-->
 									<div class="d-flex align-items-center ms-1 ms-lg-3">
 										<!--begin::Menu toggle-->

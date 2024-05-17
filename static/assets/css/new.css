@@ -40,7 +40,7 @@ body { background-image: url('assets/media/auth/bg-valcas.png') !important; }
 }
 
 .content-map{ max-width: 1000px; width: 100vw; position: absolute;}
-#logo_map{width: 11vw; position: fixed; right: 6em; top: 8em;}
+#logo_map{width: 11vw; position: fixed; right: 6em; top: 10em;}
 .svg_map{ width: 100%; position: absolute; left: 0; top: 0;}
 #items_map{ width: 100%; position: absolute; left: 0; top: 0;}
 
