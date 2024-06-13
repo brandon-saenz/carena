@@ -287,13 +287,13 @@ License: For each use you must have a valid license purchased only from above li
 
 							
 							<div class="div-center" style="height: 100vh;">
-								<img src="img/bg_carena.png" class="bg-carena">
-								<img src="img/carena_logo.png" id="logo_map">
+								<img src="img/bg_carena.png?<?php echo filemtime(ROOT_DIR . 'static/img/bg_carena.png'); ?>" class="bg-carena">
+								<img src="img/carena_logo.png?<?php echo filemtime(ROOT_DIR . 'static/img/carena_logo.png'); ?>" id="logo_map">
 								<div class="content-map">
 									<!--  -->
-									<img src="img/bg_mapa.svg" class="svg_map">
-									<img src="img/mapa_nomenclaturas.svg" :class="vista_mapa=='nomenclaturas'?'svg_map':'d-none svg_map'">
-									<img src="img/mapa_superficies.svg" :class="vista_mapa=='medidas'?'svg_map':'d-none svg_map'">
+									<img src="img/bg_mapa.svg?<?php echo filemtime(ROOT_DIR . 'static/img/bg_mapa.svg'); ?>" class="svg_map">
+									<img src="img/mapa_nomenclaturas.svg?<?php echo filemtime(ROOT_DIR . 'static/img/mapa_nomenclaturas.svg'); ?>" :class="vista_mapa=='nomenclaturas'?'svg_map':'d-none svg_map'">
+									<img src="img/mapa_superficies.svg?<?php echo filemtime(ROOT_DIR . 'static/img/mapa_superficies.svg'); ?>" :class="vista_mapa=='medidas'?'svg_map':'d-none svg_map'">
 									<svg id="items_map" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2158.15 1728">
 										<template v-for="(item, i) in listado">
 											<path :data-index="i" v-if="item.tipo_elemento === 'path'" :key="i" :d="item.points" :class="'item_map '+item.class"/>
@@ -383,8 +383,18 @@ License: For each use you must have a valid license purchased only from above li
 												<!--begin::Menu item-->
 												<div class="menu-item px-3" style="margin-top: -1em;" v-if="elemento">
 													<div class="menu-content">
-														<a class="btn btn-light-primary btn-sm px-4" style="margin-right: 0.4em;"><i class="fas fa-file-pdf" style="font-size: 1.4em; margin-right: 0.2em;"></i>VER POLÍGONO</a>
-														<a class="btn btn-light-primary btn-sm px-4"><i class="fas fa-file-pdf" style="font-size: 1.4em; margin-right: 0.2em;"></i>VER MANZANERO</a>
+														<a v-if="elemento.archivo_poligono" target="_blank" :href="'https://saevalcas.mx/data/privada/inventario/poligono/'+elemento.archivo_poligono" class="btn btn-light-primary btn-sm px-4" style="margin-right: 0.4em;">
+															<i class="fas fa-file-pdf" style="font-size: 1.4em; margin-right: 0.2em;"></i>VER POLÍGONO
+														</a>
+														<a v-else class="btn btn-light-secondary btn-sm px-4" style="margin-right: 0.4em; opacity: 0.3; cursor: not-allowed;">
+															<i class="fas fa-file-pdf" style="font-size: 1.4em; margin-right: 0.2em;"></i>VER POLÍGONO
+														</a>
+														<a v-if="elemento.archivo_manzanero" target="_blank" :href="'https://saevalcas.mx/data/privada/inventario/manzanero/'+elemento.archivo_manzanero" class="btn btn-light-primary btn-sm px-4">
+															<i class="fas fa-file-pdf" style="font-size: 1.4em; margin-right: 0.2em;"></i>VER MANZANERO
+														</a>
+														<a v-else class="btn btn-light-secondary btn-sm px-4" style="margin-right: 0.4em; opacity: 0.3; cursor: not-allowed;">
+															<i class="fas fa-file-pdf" style="font-size: 1.4em; margin-right: 0.2em;"></i>VER MANZANERO
+														</a>
 													</div>
 												</div>
 												<!--end::Menu item-->
@@ -393,7 +403,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Menu separator-->
 												<!--begin::Menu item-->
 												<div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-start">
-													<a class="menu-link px-3">
+													<a class="menu-link px-3" style="cursor: not-allowed;">
 														<span class="menu-title text-gray-900 fs-7" style="margin-left: 0.5em;">
 															<i class="fas fa-tools fs-6 text-gray-900" style="margin-right: 0.5em; width: 1.6em;"></i>
 															<span class="fs-6 text-gray-900" style="margin-right: 0.5em;">Ficha Técnica</span>
@@ -407,7 +417,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Menu separator-->
 												<!--begin::Menu item-->
 												<div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-start">
-													<a class="menu-link px-3">
+													<a class="menu-link px-3" style="cursor: not-allowed;">
 														<span class="menu-title text-gray-900 fs-6" style="margin-left: 0.5em;">
 															<i class="fas fa-file-invoice-dollar fs-6 text-gray-900" style="margin-right: 0.5em; width: 1.6em;"></i>
 															<span class="fs-6 text-gray-900" style="margin-right: 0.5em;">Condiciones de Financiamiento</span>
@@ -421,7 +431,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Menu separator-->
 												<!--begin::Menu item-->
 												<div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-start">
-													<a class="menu-link px-3">
+													<a class="menu-link px-3" style="cursor: not-allowed;">
 														<span class="menu-title text-gray-900 fs-6" style="margin-left: 0.5em;">
 															<i class="fa fa-hands-helping fs-6 text-gray-900" style="margin-right: 0.5em; width: 1.6em;"></i>
 															<span class="fs-6 text-gray-900" style="margin-right: 0.5em;">Solicitudes de Propietario</span>
@@ -435,7 +445,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Menu separator-->
 												<!--begin::Menu item-->
 												<div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-start">
-													<a class="menu-link px-3">
+													<a class="menu-link px-3" style="cursor: not-allowed;">
 														<span class="menu-title text-gray-900 fs-6" style="margin-left: 0.5em;">
 															<i class="fa fa-balance-scale fs-6 text-gray-900" style="margin-right: 0.5em; width: 1.6em;"></i>
 															<span class="fs-6 text-gray-900" style="margin-right: 0.5em;">Expediente Legal</span>
@@ -449,7 +459,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Menu separator-->
 												<!--begin::Menu item-->
 												<div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-start">
-													<a class="menu-link px-3">
+													<a class="menu-link px-3" style="cursor: not-allowed;">
 														<span class="menu-title text-gray-900 fs-6" style="margin-left: 0.5em;">
 															<i class="la la-file-invoice fs-2 text-gray-900" style="margin-right: 0.5em; width: 1.1em;"></i>
 															<span class="fs-6 text-gray-900" style="margin-right: 0.5em;">Clave Catastral</span>

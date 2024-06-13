@@ -219,6 +219,8 @@ if(main_page_){
                                     VT.elemento = dump;
                                     VT.showDropdownItem();
 
+                                    console.log(VT.elemento);
+
                                     var listaItems = document.querySelectorAll('.item_map');
                                     listaItems.forEach(elem => {
                                         var elemIndex = parseInt(elem.getAttribute('data-index'));
