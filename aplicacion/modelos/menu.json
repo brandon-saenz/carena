@@ -1,0 +1,328 @@
+[
+    {
+      "title": "Inicio",
+      "ref": "STASIS",
+      "disponible": true,
+      "class": "here show menu-here-bg menu-lg-down-accordion"
+    },
+    {
+      "title": "Catalogos",
+      "ref": null,
+      "disponible": true,
+      "class": "menu-lg-down-accordion menu-sub-lg-down-indention",
+      "menu": [
+        {
+          "title": "Postventa",
+          "ref": null,
+          "disponible": true,
+          "class": "",
+          "menu": [
+            {
+              "title": "Propietarios",
+              "ref": "STASIS/catalogos/propietarios",
+              "disponible": true,
+              "class": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Bitacoras",
+      "ref": "STASIS/bitacoras/postventa",
+      "disponible": true,
+      "class": "menu-lg-down-accordion"
+    },
+    {
+      "title": "Lotes",
+      "ref": null,
+      "disponible": true,
+      "class": "menu-lg-down-accordion menu-sub-lg-down-indention",
+      "menu": [
+        {
+          "title": "Dashboard",
+          "ref": "STASIS/inventario/lotes/dashboard",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Inventario de Lotes",
+          "ref": "STASIS/inventario/lotes/inventario",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Claves Catastrales",
+          "ref": "STASIS/inventario/lotes/catastro",
+          "disponible": true,
+          "class": ""
+        }
+      ]
+    },
+    {
+      "title": "Ventas",
+      "ref": null,
+      "disponible": true,
+      "class": "menu-lg-down-accordion menu-sub-lg-down-indention",
+      "menu": [
+        {
+          "title": "Dashboard",
+          "ref": "STASIS/ventas/reportes/dashboard",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Comisiones",
+          "ref": "STASIS/ventas/comisiones",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Reporte de Ventas",
+          "ref": "STASIS/ventas/reportes/reporte_ventas",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Bitácora Propietarios",
+          "ref": "STASIS/telemarketing/cobranza",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Citas Prospectos",
+          "ref": null,
+          "disponible": true,
+          "class": "",
+          "menu": [
+            {
+              "title": "Listado de citas",
+              "ref": "STASIS/prospectaje/citas",
+              "disponible": true,
+              "class": ""
+            },
+            {
+              "title": "Gestión de prospectos",
+              "ref": "STASIS/prospectaje/gestioncitas",
+              "disponible": true,
+              "class": ""
+            },
+            {
+              "title": "Manifiesto",
+              "ref": "STASIS/prospectaje/manifiesto",
+              "disponible": true,
+              "class": ""
+            }
+          ]
+        },
+        {
+          "title": "Inventario de Lotes",
+          "ref": "STASIS/ventas/lotes",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Hoja de Registro",
+          "ref": "STASIS/ventas/hoja_registro",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Ofertas de Compra",
+          "ref": "STASIS/ventas/ofertas_compra",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Contratos",
+          "ref": "STASIS/catalogos/contratos",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Expedientes Ley Antilavado",
+          "ref": "STASIS/ventas/expedientes",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Beneficios de Compra",
+          "ref": null,
+          "disponible": true,
+          "class": "",
+          "menu": [
+            {
+              "title": "Generar",
+              "ref": "STASIS/movimientos/ventas",
+              "disponible": true,
+              "class": ""
+            },
+            {
+              "title": "Reporte",
+              "ref": "STASIS/movimientos/ventas/historial",
+              "disponible": true,
+              "class": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Postventa",
+      "ref": null,
+      "disponible": true,
+      "class": "menu-lg-down-accordion menu-sub-lg-down-indention",
+      "menu": [
+        {
+          "title": "Dashboard",
+          "ref": "STASIS/movimientos/solicitudes/dashboard",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Solicitudes",
+          "ref": "STASIS/movimientos/solicitudes/reporte",
+          "disponible": true,
+          "class": ""
+        }
+      ]
+    },
+    {
+      "title": "Cobranza",
+      "ref": null,
+      "disponible": true,
+      "class": "menu-lg-down-accordion menu-sub-lg-down-indention",
+      "menu": [
+        {
+          "title": "Facturación",
+          "ref": null,
+          "disponible": true,
+          "class": "",
+          "menu": [
+            {
+              "title": "Generar Factura",
+              "ref": "STASIS/cobranza/facturacion/generar",
+              "disponible": true,
+              "class": ""
+            },
+            {
+              "title": "Reporte de Facturación",
+              "ref": "STASIS/cobranza/facturacion/reporte",
+              "disponible": true,
+              "class": ""
+            }
+          ]
+        },
+        {
+          "title": "Dashboard",
+          "ref": "STASIS/cobranza/dashboard",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Consumo de Agua",
+          "ref": null,
+          "disponible": true,
+          "class": "",
+          "menu": [
+            {
+              "title": "Registro de Consumos",
+              "ref": "STASIS/cobranza/agua",
+              "disponible": true,
+              "class": ""
+            },
+            {
+              "title": "Recibos CESPTE",
+              "ref": "STASIS/cobranza/agua/recibo_cespte",
+              "disponible": true,
+              "class": ""
+            }
+          ]
+        },
+        {
+          "title": "Bitácora Propietarios",
+          "ref": "STASIS/telemarketing/cobranza/?com=1",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Notas de Crédito",
+          "ref": null,
+          "disponible": true,
+          "class": "",
+          "menu": [
+            {
+              "title": "Cancelaciones",
+              "ref": "STASIS/cobranza/notas_credito",
+              "disponible": true,
+              "class": ""
+            },
+            {
+              "title": "Saldo a Favor",
+              "ref": "STASIS/cobranza/notas_credito/saldos",
+              "disponible": true,
+              "class": ""
+            }
+          ]
+        },
+        {
+          "title": "Asociación de Colonos",
+          "ref": "STASIS/cobranza/au",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "IBP",
+          "ref": "STASIS/cobranza/ibp",
+          "disponible": true,
+          "class": ""
+        }
+      ]
+    },
+    {
+      "title": "Legal",
+      "ref": null,
+      "disponible": true,
+      "class": "menu-lg-down-accordion menu-sub-lg-down-indention",
+      "menu": [
+        {
+          "title": "Bitácora Firmas Pendientes",
+          "ref": "STASIS/legal/bitacora",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Expedientes Digitales",
+          "ref": "STASIS/legal/expedientes",
+          "disponible": true,
+          "class": ""
+        },
+        {
+          "title": "Convenios de Propietarios",
+          "ref": null,
+          "disponible": true,
+          "class": "",
+          "menu": [
+            {
+              "title": "Listado de Propietarios",
+              "ref": "STASIS/legal/carpeta",
+              "disponible": true,
+              "class": ""
+            },
+            {
+              "title": "Convenios Generados",
+              "ref": "STASIS/legal/carpeta/reportes",
+              "disponible": true,
+              "class": ""
+            }
+          ]
+        },
+        {
+          "title": "Documentos Inmobiliaria",
+          "ref": "STASIS/legal/contratos/inmobiliaria",
+          "disponible": true,
+          "class": ""
+        }
+      ]
+    }
+]

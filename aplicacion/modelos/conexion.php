@@ -26,7 +26,7 @@ final class Modelos_Conexion {
 			try {  
 				$lista = array('localhost', '127.0.0.1');
 				if(in_array($_SERVER['HTTP_HOST'], $lista)) {
-					$this->_host = 'saevalcas_2-db-1';
+					$this->_host = 'saevalcas-db-1';
 					$_usuario =		 'root';
 					$_contrasena =	 'root';
 					$_nombre =		 'saevalcas_db';

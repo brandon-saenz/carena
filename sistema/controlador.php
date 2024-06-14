@@ -3,12 +3,22 @@ class Controlador {
 	public function __construct() {
 		spl_autoload_register(function ($nombreClase) {
 			$nombreArchivo = str_replace('_', DIRECTORY_SEPARATOR, strtolower($nombreClase)).'.php';
-		    $archivo = APP . $nombreArchivo;
+		    $archivo = $nombreArchivo;
 
 	     	if ((class_exists($archivo,FALSE))) {
 	            return FALSE;
 	        }
-	        $pClassFilePath = str_replace('_',DIRECTORY_SEPARATOR,$archivo);
+
+			$lista = array('localhost', '127.0.0.1');
+			if(in_array($_SERVER['HTTP_HOST'], $lista)) {
+				$archivo = APP . $nombreArchivo;
+				$pClassFilePath = str_replace('_',DIRECTORY_SEPARATOR,$archivo);
+			} else {
+				$archivo = $nombreArchivo;
+				$pClassFilePath = '/home/saevalcas/public_html/carena/aplicacion/' . str_replace('_',DIRECTORY_SEPARATOR,$archivo);
+			}
+
+
 	        if ((file_exists($pClassFilePath) === FALSE) || (is_readable($pClassFilePath) === FALSE)) {
 	            return FALSE;
 	        }
