@@ -103,6 +103,13 @@ if(main_page_){
                 vista_mapa: 'nomenclaturas',
                 totales: [],
                 instancia: false,
+                financiamiento: [
+                    {porcentaje: 20, valor_m2: '1,000.00', precio_lote: '318,450.00'},
+                    {porcentaje: 25, valor_m2: '900.00', precio_lote: '286,605.00'},
+                    {porcentaje: 35, valor_m2: '825.00', precio_lote: '262,721.00'},
+                    {porcentaje: 50, valor_m2: '750.00', precio_lote: '238,838.00'},
+                    {porcentaje: 100, valor_m2: '700.00', precio_lote: '222,915.00'},
+                ]
             }
         },
         created() {
