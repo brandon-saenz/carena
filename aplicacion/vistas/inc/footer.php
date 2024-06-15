@@ -333,6 +333,14 @@
                 //     },
                 // ],
                 vista_mapa: 'nomenclaturas',
+                listStatus: [
+                    {title: 'SIN ASIGNAR', class: 'danger', num: 0, active: false, total: 0,},
+                    {title: 'DISPONIBLE', class: 'success', num: 1, active: false, total: 0,},
+                    {title: 'VENDIDO', class: 'primary', num: 2, active: false, total: 0,},
+                    {title: 'APARTADO', class: 'warning', num: 3, active: false, total: 0,},
+                    {title: 'PREVENTA', class: 'info', num: 4, active: false, total: 0,},
+                    {title: 'NO DISPONIBLE', class: 'danger', num: 5, active: false, total: 0,},
+                ]
             }
         },
         created(){
@@ -340,7 +348,34 @@
         },
         methods: {
             setterData(){
-                // console.log(this.listaMenu);
+                const VT = this;
+                var intervalID = setInterval(function(){
+                    if(mapa.instancia){
+                        for (let index = 0; index < mapa.totales.length; index++) {
+                            VT.listStatus[index].total = mapa.totales[index];
+                        }
+                        clearInterval(intervalID);
+                    }
+                }, 10);
+            },
+            displayColorStatus(num){
+                console.log(this.listStatus[num]);
+
+                this.listStatus.forEach(itemStatus => {
+                    if(num==itemStatus.num){
+                        itemStatus.active = true;
+                    }else{
+                        itemStatus.active = false;
+                    }
+                });
+
+                mapa.listado.forEach(item => {
+                    if(item.status == num && item.tipo == 'lote'){
+                        item.color_persistente = true;
+                    }else{
+                        item.color_persistente = false;
+                    }
+                });
             },
             setVistaMapa(){
                 if(this.vista_mapa=='nomenclaturas'){

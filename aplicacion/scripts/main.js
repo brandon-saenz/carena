@@ -101,6 +101,8 @@ if(main_page_){
                 modo: 'ver',
                 scale: 1,
                 vista_mapa: 'nomenclaturas',
+                totales: [],
+                instancia: false,
             }
         },
         created() {
@@ -108,12 +110,6 @@ if(main_page_){
         },
         methods: {
             setterData(){
-                var toolbar_vue = document.querySelector('.toolbar-vue');
-                toolbar_vue.classList.remove('d-none');
-                toolbar_vue.classList.add('d-flex');
-
-                var mapa = document.querySelector('.mapa');
-                mapa.classList.remove('d-none');
                 this.getListado();
             },
             zoom(type){
@@ -202,7 +198,10 @@ if(main_page_){
                         console.log(data);
                         var res = JSON.parse(data);
                         VT.listado = res.data;
+                        VT.totales = res.totales;
                         console.log(VT.listado);
+
+                        VT.instancia = true;
 
                         setTimeout(() => {
                             const pathsAndPolygons = document.querySelectorAll('.item_map');
@@ -233,6 +232,17 @@ if(main_page_){
 
                                 });
                             });
+
+                            var toolbar_vue = document.querySelector('.toolbar-vue');
+                            toolbar_vue.classList.remove('d-none');
+                            toolbar_vue.classList.add('d-flex');
+
+                            var loading_mapa = document.querySelector('.loading-mapa');
+                            loading_mapa.classList.add('d-none');
+
+                            var mapa = document.querySelector('.mapa');
+                            mapa.classList.remove('d-none');
+
                         }, 100);
                     },
                     error:function(data){

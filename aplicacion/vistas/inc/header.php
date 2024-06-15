@@ -237,6 +237,33 @@
 										<!--begin::Menu toggle-->
 									</div>
 									<!--end::Ver Medidas-->
+									<!--begin::Filtrar Status-->
+									<div class="d-flex align-items-center ms-1 ms-lg-3">
+										<!--begin::Menu toggle-->
+										<a href="#" class="btn btn-icon btn-active-light-primary btn-custom w-30px h-30px w-md-40px h-md-40px" data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+											<i class="ki-duotone ki-down-square" style="font-size: 1.6em !important;">
+												<span class="path1"></span>
+												<span class="path2"></span>
+											</i>
+										</a>
+										<!--begin::Menu toggle-->
+										<!--begin::Menu-->
+										<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-title-gray-700 menu-icon-gray-500 menu-active-bg menu-state-color fw-semibold py-4 fs-base w-200px" data-kt-menu="true" data-kt-element="filtrar-status">
+											<!--begin::Menu item-->
+											<div class="menu-item px-3 my-0" v-for="(item, i) in listStatus" :key="i">
+												<a :class="item.active?'menu-link px-3 py-2 active':'menu-link px-3 py-2'" @click="displayColorStatus(item.num)">
+													<!-- <span class="menu-icon" data-kt-element="icon">
+														<i :class="'fas fa-square fs-1 color-'+item.class"></i>
+													</span> -->
+													<span :class="'badge badge-'+item.class+' fs-8 fw-bold'" style="margin-right: 0.8em;">{{item.total}}</span>
+													<span class="menu-title">{{item.title}}</span>
+												</a>
+											</div>
+											<!--end::Menu item-->
+										</div>
+										<!--end::Menu-->
+									</div>
+									<!--end::Filtrar Status-->
 									<!--begin::Theme mode-->
 									<div class="d-flex align-items-center ms-1 ms-lg-3">
 										<!--begin::Menu toggle-->

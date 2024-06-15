@@ -18,8 +18,10 @@
 			<img src="img/mapa_superficies.svg?<?php echo filemtime(ROOT_DIR . 'static/img/mapa_superficies.svg'); ?>" :class="vista_mapa=='medidas'?'svg_map':'d-none svg_map'">
 			<svg id="items_map" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2158.15 1728">
 				<template v-for="(item, i) in listado">
-					<path :data-index="i" v-if="item.tipo_elemento === 'path'" :key="i" :d="item.points" :class="'item_map '+item.class"/>
-					<polygon :data-index="i" v-else-if="item.tipo_elemento === 'polygon'" :key="i" :points="item.points" :class="'item_map '+item.class"/>
+					<path :data-index="i" v-if="item.tipo_elemento === 'path'" :key="i" :d="item.points" 
+					:class="'item_map '+item.class+' lote_status-'+item.color_status" :style="item.color_persistente?'opacity: 0.7;':''"/>
+					<polygon :data-index="i" v-else-if="item.tipo_elemento === 'polygon'" :key="i" :points="item.points" 
+					:class="'item_map '+item.class+' lote_status-'+item.color_status" :style="item.color_persistente?'opacity: 0.7;':''"/>
 				</template>
 			</svg>
 		</div>
@@ -45,6 +47,14 @@
 							<div class="menu-content px-3 d-flex" style="justify-content: space-between;">
 								<span style="margin-right: 0.5em; margin-block: auto;">Nomenclatura: </span>
 								<input class="form-control form-control-solid form_item" type="text" :value="elemento.nombre" readonly>
+							</div>
+						</div>
+						<!--end::Menu item-->
+						<!--begin::Menu item-->
+						<div class="menu-item px-3">
+							<div class="menu-content px-3 d-flex" style="justify-content: space-between;">
+								<span style="margin-right: 0.5em; margin-block: auto;">Status: </span>
+								<input :class="'form-control form-control-solid form_item text-white lote_status-'+elemento.color_status" type="text" :value="elemento.label_status" readonly>
 							</div>
 						</div>
 						<!--end::Menu item-->
@@ -252,6 +262,13 @@
 		</div>
 		<!--end::Menu item-->
 	</form>
+</div>
+<div class="loading-mapa" style="width: 100%; height: 100%; display: flex; justify-content: center;">
+	<button type="button" class="btn" data-kt-indicator="on">
+		<span class="indicator-progress fs-1">
+			Cargando Mapa... <span class="spinner-border spinner-border-page spinner-page align-middle ms-2"></span>
+		</span>
+	</button>
 </div>
 <script src="aplicacion/scripts/main.js?<?php echo filemtime(ROOT_DIR . 'aplicacion/scripts/main.js'); ?>"></script>
 <!--end:::Main-->

@@ -46,32 +46,45 @@ body { background-image: url('assets/media/auth/bg-valcas.png') !important; }
 
 .svg_map{filter: invert(0%);}
 [data-bs-theme="dark"] .svg_map{filter: invert(100%);}
+
 .class_item_lote{
-    fill: #1B84FF;
-    opacity: 0;
-    stroke: #1B84FF;
     stroke-width: 2px;
     cursor: pointer;
     transition: all 0.2s;
+    opacity: 0;
 }
 
 .class_item_amenidad{
-    fill: #ff3d1b;
+    fill: #ff3d1b !important;
     opacity: 0;
-    stroke: #ff3d1b;
+    stroke: #ff3d1b !important;
     stroke-width: 2px;
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .class_item_calle{
-    fill: #850f95;
+    fill: #850f95 !important;
     opacity: 0;
-    stroke: #850f95;
+    stroke: #850f95 !important;
     stroke-width: 2px;
     cursor: pointer;
     transition: all 0.2s;
 }
+
+.lote_status-primary{fill: #3699FF; stroke: #3699FF; background-color: #3699FF !important;}
+.lote_status-secondary{fill: #E4E6EF; stroke: #E4E6EF; background-color: #E4E6EF !important;}
+.lote_status-success{fill: #1BC5BD; stroke: #1BC5BD; background-color: #1BC5BD !important;}
+.lote_status-danger{fill: #F64E60; stroke: #F64E60; background-color: #F64E60 !important;}
+.lote_status-warning{fill: #FFA800; stroke: #FFA800; background-color: #FFA800 !important;}
+.lote_status-info{fill: #8950FC; stroke: #8950FC; background-color: #8950FC !important;}
+
+.color-primary{color: #3699FF !important;}
+.color-secondary{color: #E4E6EF !important;}
+.color-success{color: #1BC5BD !important;}
+.color-danger{color: #F64E60 !important;}
+.color-warning{color: #FFA800 !important;}
+.color-info{color: #8950FC !important;}
 
 
 .item_map_selected{

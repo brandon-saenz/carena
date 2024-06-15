@@ -6846,6 +6846,17 @@ textarea.form-control-lg {
     --bs-spinner-border-width: 0.145em
 }
 
+.spinner-border-page {
+    --bs-spinner-width: 3rem;
+    --bs-spinner-height: 3rem;
+    --bs-spinner-vertical-align: -0.125em;
+    --bs-spinner-border-width: 0.26rem;
+    --bs-spinner-animation-speed: 0.65s;
+    --bs-spinner-animation-name: spinner-border;
+    border: var(--bs-spinner-border-width) solid currentcolor;
+    border-right-color: transparent
+}
+
 @keyframes spinner-grow {
     0% {
         transform: scale(0)
