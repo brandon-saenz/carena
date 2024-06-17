@@ -333,7 +333,7 @@
 							</h3>
 							<div class="card-toolbar">
 								<a class="btn btn-sm btn-light-success btn-active-light-success" style="cursor: default;">
-									Precio M<sup>2</sup> de lista $1,000.00
+									Precio M<sup>2</sup> de lista {{precio_m2}}
 								</a>
 							</div>
 						</div>
@@ -365,10 +365,10 @@
 												<a class="text-gray-900 fw-bold text-hover-primary d-block fs-6 text-center">{{item.porcentaje}}%</a>
 											</td>
 											<td>
-												<a class="text-gray-900 fw-bold text-hover-primary d-block fs-6 text-center">${{item.valor_m2}}</a>
+												<a class="text-gray-900 fw-bold text-hover-primary d-block fs-6 text-center">{{item.valor_m2}}</a>
 											</td>
 											<td>
-												<a class="text-gray-900 fw-bold text-hover-primary d-block fs-6 text-center">${{item.precio_lote}}</a>
+												<a class="text-gray-900 fw-bold text-hover-primary d-block fs-6 text-center">{{item.precio_lote}}</a>
 											</td>
 										</tr>
 									</tbody>

@@ -103,13 +103,8 @@ if(main_page_){
                 vista_mapa: 'nomenclaturas',
                 totales: [],
                 instancia: false,
-                financiamiento: [
-                    {porcentaje: 20, valor_m2: '1,000.00', precio_lote: '318,450.00'},
-                    {porcentaje: 25, valor_m2: '900.00', precio_lote: '286,605.00'},
-                    {porcentaje: 35, valor_m2: '825.00', precio_lote: '262,721.00'},
-                    {porcentaje: 50, valor_m2: '750.00', precio_lote: '238,838.00'},
-                    {porcentaje: 100, valor_m2: '700.00', precio_lote: '222,915.00'},
-                ]
+                financiamiento: [],
+                precio_m2: '0.00'
             }
         },
         created() {
@@ -191,6 +186,13 @@ if(main_page_){
 
                 console.log(this.scale);
             },
+            setActiveLote(json){
+                console.log('setActiveLote()');
+                console.log(json);
+
+                this.financiamiento = json.condiciones_financiamiento;
+                this.precio_m2 = json.precio_m2;
+            },
             getListado(){
                 const VT = this;
                 // var baseURL = 'http://localhost/devvalcas';
@@ -236,6 +238,8 @@ if(main_page_){
                                             elem.classList.remove('item_map_selected');
                                         }
                                     });
+
+                                    VT.setActiveLote(dump);
 
                                 });
                             });
