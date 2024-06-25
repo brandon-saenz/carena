@@ -13,7 +13,7 @@ if(in_array($_SERVER['HTTP_HOST'], $lista)) {
 	$config['openpay_bearer_token']			= 'c2tfOWEwZTE0ZGU2NGI1NGM3Y2I5MGRhMjUxMWM5OGYyZjg6';
 	setlocale(LC_MONETARY, '');
 } else {
-	$config['base_url']						= 'https://pruebas.saevalcas.mx/carena/mapa';
+	$config['base_url']						= 'https://saevalcas.mx/carena/mapa';
 	$config['openpay_production_mode']		= true;
 	$config['openpay_sandbox_mode_js']		= 'false';
 	$config['openpay_merchant_id']			= 'm7aci0xq2pyewsqdhy9r';
