@@ -12,7 +12,13 @@ final class Modelos_Header extends Modelo
         $response = array();
 		try {
             $datos = array();
-            $stasis = STASIS;
+
+            $lista = array('localhost', '127.0.0.1');
+			if(in_array($_SERVER['HTTP_HOST'], $lista)) {
+                $stasis = 'http://localhost/carena';
+			} else {
+                $stasis = 'https://saevalcas.mx/carena';
+			}
 
             $filePath = APP . 'modelos/menu.json';
 

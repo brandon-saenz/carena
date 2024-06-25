@@ -15,7 +15,7 @@ class Controlador {
 				$pClassFilePath = str_replace('_',DIRECTORY_SEPARATOR,$archivo);
 			} else {
 				$archivo = $nombreArchivo;
-				$pClassFilePath = '/home/saevalcas/public_html/carena/aplicacion/' . str_replace('_',DIRECTORY_SEPARATOR,$archivo);
+				$pClassFilePath = '/home/saevalcas/dev/carena/mapa/aplicacion/' . str_replace('_',DIRECTORY_SEPARATOR,$archivo);
 			}
 
 
