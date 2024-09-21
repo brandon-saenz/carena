@@ -200,7 +200,7 @@ if(main_page_){
 
                 $.ajax({
                     type: "get",
-                    url: baseURL+"/externo/carena/get_listado",
+                    url: baseURL+"/carena/externo/carena/get_listado",
                     beforeSend: function(){
                     },
                     success: function(data, status, xhr){
