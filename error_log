@@ -1,0 +1,19 @@
+[24-Jun-2024 17:37:53 America/Tijuana] PHP Fatal error:  Uncaught Error: Class 'Modelos_Contenedor' not found in /home/saevalcas/dev/carena/mapa/sistema/controlador.php:31
+Stack trace:
+#0 /home/saevalcas/dev/carena/mapa/aplicacion/controladores/main.php(7): Controlador->cargarModelo('Header')
+#1 /home/saevalcas/dev/carena/mapa/sistema/fw.php(42): Main->index()
+#2 /home/saevalcas/dev/carena/mapa/index.php(14): fw()
+#3 {main}
+  thrown in /home/saevalcas/dev/carena/mapa/sistema/controlador.php on line 31
+[24-Jun-2024 17:40:45 America/Tijuana] PHP Warning:  require_once(/home/saevalcas/dev/carena/mapa/aplicacion/controladores/error.php): failed to open stream: No such file or directory in /home/saevalcas/dev/carena/mapa/sistema/fw.php on line 30
+[24-Jun-2024 17:40:45 America/Tijuana] PHP Fatal error:  require_once(): Failed opening required '/home/saevalcas/dev/carena/mapa/aplicacion/controladores/error.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/saevalcas/dev/carena/mapa/sistema/fw.php on line 30
+[24-Jun-2024 17:51:04 America/Tijuana] PHP Warning:  require_once(/home/saevalcas/dev/carena/mapa/aplicacion/controladores/error.php): failed to open stream: No such file or directory in /home/saevalcas/dev/carena/mapa/sistema/fw.php on line 30
+[24-Jun-2024 17:51:04 America/Tijuana] PHP Fatal error:  require_once(): Failed opening required '/home/saevalcas/dev/carena/mapa/aplicacion/controladores/error.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/saevalcas/dev/carena/mapa/sistema/fw.php on line 30
+[24-Jun-2024 17:53:07 America/Tijuana] PHP Warning:  require_once(/home/saevalcas/dev/carena/mapa/aplicacion/controladores/error.php): failed to open stream: No such file or directory in /home/saevalcas/dev/carena/mapa/sistema/fw.php on line 30
+[24-Jun-2024 17:53:07 America/Tijuana] PHP Fatal error:  require_once(): Failed opening required '/home/saevalcas/dev/carena/mapa/aplicacion/controladores/error.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/saevalcas/dev/carena/mapa/sistema/fw.php on line 30
+[24-Jun-2024 17:53:13 America/Tijuana] PHP Warning:  require_once(/home/saevalcas/dev/carena/mapa/aplicacion/controladores/error.php): failed to open stream: No such file or directory in /home/saevalcas/dev/carena/mapa/sistema/fw.php on line 30
+[24-Jun-2024 17:53:13 America/Tijuana] PHP Fatal error:  require_once(): Failed opening required '/home/saevalcas/dev/carena/mapa/aplicacion/controladores/error.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/saevalcas/dev/carena/mapa/sistema/fw.php on line 30
+[24-Jun-2024 17:53:43 America/Tijuana] PHP Warning:  require_once(/home/saevalcas/dev/carena/mapa/aplicacion/controladores/error.php): failed to open stream: No such file or directory in /home/saevalcas/dev/carena/mapa/sistema/fw.php on line 30
+[24-Jun-2024 17:53:43 America/Tijuana] PHP Fatal error:  require_once(): Failed opening required '/home/saevalcas/dev/carena/mapa/aplicacion/controladores/error.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/saevalcas/dev/carena/mapa/sistema/fw.php on line 30
+[24-Jun-2024 17:55:17 America/Tijuana] PHP Warning:  require_once(/home/saevalcas/dev/carena/mapa/aplicacion/controladores/error.php): failed to open stream: No such file or directory in /home/saevalcas/dev/carena/mapa/sistema/fw.php on line 30
+[24-Jun-2024 17:55:17 America/Tijuana] PHP Fatal error:  require_once(): Failed opening required '/home/saevalcas/dev/carena/mapa/aplicacion/controladores/error.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/saevalcas/dev/carena/mapa/sistema/fw.php on line 30

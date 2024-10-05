@@ -260,14 +260,26 @@
 				<a v-if="modo=='editar'" class="btn btn-light-primary btn-sm px-4"  @click="setModo('ver')"><i class="fas fa-times" style="font-size: 1.8em;"></i> CANCELAR</a>
 				<template v-if="elemento">
 					<template v-if="elemento.tipo=='lote'">
-						<a v-if="modo=='ver'" class="btn btn-light-primary btn-sm px-4" href="https://pruebas.saevalcas.mx/carena/ventas/ofertas_compra">
-							<i class="ki-duotone ki-price-tag" style="font-size: 1.65rem !important;">
-								<span class="path1"></span>
-								<span class="path2"></span>
-								<span class="path3"></span>
-							</i>	
-							<span>GENERAR OFERTA DE COMPRA</span>
-						</a>
+						<template v-if="elemento.status!=2">
+							<a v-if="modo=='ver'" class="btn btn-light-primary btn-sm px-4" target="_blank" href="https://saevalcas.mx/carena/ventas/ofertas_compra/nueva">
+								<i class="ki-duotone ki-price-tag" style="font-size: 1.65rem !important;">
+									<span class="path1"></span>
+									<span class="path2"></span>
+									<span class="path3"></span>
+								</i>	
+								<span>GENERAR OFERTA DE COMPRA</span>
+							</a>
+						</template>
+						<template v-else>
+							<a v-if="modo=='ver'" class="btn btn-light-secondary btn-sm px-4" style="opacity: 0.6;">
+								<i class="ki-duotone ki-price-tag" style="font-size: 1.65rem !important;">
+									<span class="path1"></span>
+									<span class="path2"></span>
+									<span class="path3"></span>
+								</i>	
+								<span>GENERAR OFERTA DE COMPRA</span>
+							</a>
+						</template>
 					</template>
 				</template>
 			</div>
